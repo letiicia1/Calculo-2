@@ -14,8 +14,10 @@ class CalculadoraCientifica {
     }
 
     static int prioridade(String a) {
-        if (a.equals("*") || a.equals("/") || a.equals("e") || a.equals("ln") || a.equals("sqrt") || a.equals("pow") || a.equals("sin") || a.equals("cos") || a.equals("tan"))
+        if (a.equals("*") || a.equals("/") || a.equals("pow") ||  a.equals("e") || a.equals("ln") || a.equals("sqrt"))
             return 2;
+        else if (a.equals("sin") || a.equals("cos") || a.equals("tan")  )
+        return 3;
         else if (a.equals("+") || a.equals("-"))
             return 1;
         return 0;
